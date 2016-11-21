@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  
-  angular.module('LunchChecker', []);
+
+  angular.module('LunchCheck', []);
 
 })();

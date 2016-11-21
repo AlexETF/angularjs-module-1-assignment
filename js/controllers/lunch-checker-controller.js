@@ -1,16 +1,16 @@
 (function(){
   'using strict';
 
-  angular.module('LunchChecker')
-  .controller('LunchCheckerController', LunchCheckerController);
+  angular.module('LunchCheck')
+  .controller('LunchCheckController', LunchCheckController);
   //protect code from minifaction
-  LunchCheckerController.$inject = ['$scope'];
-  function LunchCheckerController($scope){
+  LunchCheckController.$inject = ['$scope'];
+  function LunchCheckController($scope){
     //scope variables
     $scope.dishes = "";
     $scope.dishesArray = [];
     $scope.errorMessage = "";
-    $scope.redErrorMessageClass = true;
+    $scope.redErrorMessageClass = true; //falg for setting proper css class for red border and red font
     //button click handler
     $scope.checkDishes = function(){
       $scope.dishesArray = getFilteredElements($scope.dishes.split(','));
